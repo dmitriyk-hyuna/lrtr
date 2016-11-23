@@ -1,12 +1,13 @@
 language: php
 
 php:
-  - 5.6
+  - 7.0
 
 before_script:
   - cp .env.travis .env
   - composer self-update
   - composer install --no-interaction
+  - composer update
   - chmod -R 755 storage
   - php artisan key:generate
 script:
