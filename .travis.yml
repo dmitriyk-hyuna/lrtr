@@ -11,4 +11,5 @@ before_script:
   - chmod -R 755 storage
 
 script:
+  - php artisan config:clear
   - vendor/bin/phpunit
